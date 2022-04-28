@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:elevation="0dp"
+    android:background="@color/light_blue_600"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:id="@+id/rl_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp"
+            app:contentInsetStart="0dp"
+            android:background="#00000000"
+            app:layout_scrollFlags="snap|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+                android:id="@+id/tv_center_title"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="17sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_marginRight="20dp"
+                android:id="@+id/tv_right"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+        <TextView
+            android:id="@+id/tv_title"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:textSize="16sp"
+            android:layout_height="?attr/actionBarSize"/>
+    </RelativeLayout>
+
+
+</com.google.android.material.appbar.AppBarLayout>

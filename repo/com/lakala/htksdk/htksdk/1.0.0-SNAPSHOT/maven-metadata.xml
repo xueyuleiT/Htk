@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.lakala.htksdk</groupId>
+  <artifactId>htksdk</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20220428.032612</timestamp>
+      <buildNumber>4</buildNumber>
+    </snapshot>
+    <lastUpdated>20220428032612</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0.0-20220428.032612-4</value>
+        <updated>20220428032612</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>aar</extension>
+        <value>1.0.0-20220428.032612-4</value>
+        <updated>20220428032612</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

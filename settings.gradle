@@ -1,0 +1,3 @@
+rootProject.name = "Htk"
+include ':app'
+include ':htksdk'
