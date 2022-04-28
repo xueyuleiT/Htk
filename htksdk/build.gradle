@@ -61,53 +61,53 @@ task generateSourcesJar(type: Jar) {
     classifier 'sources'
 }
 
-def versionName = "2.7.0-SNAPSHOT"
-
-
-publishing {
-    publications {
-        Production(MavenPublication) {
-            groupId = 'com.lakala.htksdk'
-            artifactId = 'easy-htk'
-            version = '1.0'
-
-            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
-            artifact generateSourcesJar
-        }
-    }
-    repositories {
-        // 定义一个 maven 仓库
-        maven {
-            def releasesRepoUrl = layout.buildDirectory.dir('repos/releases')
-            def snapshotsRepoUrl = layout.buildDirectory.dir('repos/snapshots')
-            // 可以有且仅有一个仓库不指定 name 属性，会隐式设置为 Maven
-            // 根据 versionName 来判断仓库地址
-//            url = "https://github.com/xueyuleiT/htksdk"
-            url = uri("https://github.com/xueyuleiT/htksdk")
-            // 仓库用户名密码
-            credentials {
-                username = "root"
-                password = "root"
-            }
-        }
-        // 定义第二个 maven 仓库，名为 Nexus
-        maven {
-            def releasesRepoUrl = layout.buildDirectory.dir('repos/releases')
-            def snapshotsRepoUrl = layout.buildDirectory.dir('repos/snapshots')
-            // 必须显示指定 name
-            name = "nexus"
-            url = versionName.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
-        }
-    }
-}
+//def versionName = "2.7.0-SNAPSHOT"
+//
+//
+//publishing {
+//    publications {
+//        Production(MavenPublication) {
+//            groupId = 'com.lakala.htksdk'
+//            artifactId = 'easy-htk'
+//            version = '1.0'
+//
+//            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+//            artifact generateSourcesJar
+//        }
+//    }
+//    repositories {
+//        // 定义一个 maven 仓库
+//        maven {
+//            def releasesRepoUrl = layout.buildDirectory.dir('repos/releases')
+//            def snapshotsRepoUrl = layout.buildDirectory.dir('repos/snapshots')
+//            // 可以有且仅有一个仓库不指定 name 属性，会隐式设置为 Maven
+//            // 根据 versionName 来判断仓库地址
+////            url = "https://github.com/xueyuleiT/htksdk"
+//            url = uri("https://github.com/xueyuleiT/htksdk")
+//            // 仓库用户名密码
+//            credentials {
+//                username = "root"
+//                password = "root"
+//            }
+//        }
+//        // 定义第二个 maven 仓库，名为 Nexus
+//        maven {
+//            def releasesRepoUrl = layout.buildDirectory.dir('repos/releases')
+//            def snapshotsRepoUrl = layout.buildDirectory.dir('repos/snapshots')
+//            // 必须显示指定 name
+//            name = "nexus"
+//            url = versionName.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+//        }
+//    }
+//}
 
 // 源代码一起打包
-task androidSourcesJar(type: Jar) {
-    classifier = 'sources'
-    from android.sourceSets.main.java.sourceFiles
-}
-
-artifacts {
-    archives androidSourcesJar
-}
+//task androidSourcesJar(type: Jar) {
+//    classifier = 'sources'
+//    from android.sourceSets.main.java.sourceFiles
+//}
+//
+//artifacts {
+//    archives androidSourcesJar
+//}
 
